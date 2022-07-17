@@ -1,0 +1,9 @@
+.text-inherit {
+  color: inherit;
+}
+
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}

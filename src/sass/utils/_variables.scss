@@ -1,0 +1,195 @@
+// Font Family
+$font: 'Nunito Sans', sans-serif;
+$font-heading: 'Montserrat', sans-serif;
+
+// Colors
+:root {
+  --primary: #ed6789;
+  --secondary: #ffa7a0;
+  --tertiary: #f74b63;
+  --quaternary: #fb6565;
+  --primary-rgb: 237, 103, 137;
+  --secondary-rgb: 255, 167, 160;
+  --tertiary-rgb: 247, 75, 99;
+  --quaternary-rgb: 251, 101, 101;
+
+  --primary-darker: #d95e7e;
+  --secondary-darker: #ed9c96;
+  --tertiary-darker: #dd4358;
+  --quaternary-darker: #e95e5e;
+
+  --body: #4e4e4e;
+  --alternate: #7c7c7c;
+  --muted: #afafaf;
+  --separator: #dddddd;
+  --separator-light: #f1f1f1;
+  --body-rgb: 59, 59, 59;
+  --alternate-rgb: 124, 124, 124;
+  --muted-rgb: 176, 176, 176;
+  --separator-rgb: 221, 221, 221;
+  --separator-light-rgb: 241, 241, 241;
+
+  --background: #f9f9f9;
+  --foreground: #ffffff;
+  --background-rgb: 249, 249, 249;
+  --foreground-rgb: 255, 255, 255;
+
+  --background-theme: #f1eaee;
+  --background-light: #f8f8f8;
+
+  --gradient-1: #ed6789;
+  --gradient-2: #f16b8d;
+  --gradient-3: #f57092;
+
+  --gradient-1-lighter: #f97697;
+  --gradient-1-darker: #d9607e;
+
+  --light-text: #fff;
+  --dark-text: #343a40;
+  --light-text-darker: #eeeeee;
+  --dark-text-darker: #23272b;
+
+  --light-text-rgb: 255, 255, 255;
+  --dark-text-rgb: 52, 58, 64;
+
+  --danger: #cf2637;
+  --info: #279aac;
+  --warning: #ebb71a;
+  --success: #439b38;
+  --light: #dadada;
+  --dark: #4e4e4e;
+  --danger-darker: #771a23;
+  --info-darker: #19545d;
+  --warning-darker: #aa830f;
+  --success-darker: #285422;
+  --light-darker: #c9c9c9;
+  --dark-darker: #282828;
+  --body-darker: #333333;
+  --alternate-darker: #616161;
+  --muted-darker: #888888;
+  --separator-darker: #c0c0c0;
+
+  --danger-rgb: 182, 40, 54;
+  --info-rgb: 41, 138, 153;
+  --warning-rgb: 235, 183, 26;
+  --success-rgb: 65, 139, 56;
+  --light-rgb: 218, 218, 218;
+  --dark-rgb: 78, 78, 78;
+
+  --menu-shadow: 0px 3px 10px rgba(0, 0, 0, 0.12);
+  --menu-shadow-navcolor: 0px 2px 6px rgba(0, 0, 0, 0.05);
+
+  --background-navcolor-light: #fff;
+  --background-navcolor-dark: #462e3a;
+
+  --theme-image-filter: hue-rotate(145deg) contrast(0.9) brightness(1);
+}
+$colors: (
+  primary: '#00bcd4',
+  primary-dark: '#008c9e',
+  primary-light: '#00bcd4',
+  secondary: '#ff9800',
+  secondary-dark: '#ff8f00',
+  secondary-light: '#ffa726',
+  tertiary: '#ff5722',
+  tertiary-dark: '#ff5100',
+  tertiary-light: '#ff6f00',
+  success: '#4caf50',
+  success-dark: '#43a047',
+  success-light: '#4caf50',
+  warning: '#ff9800',
+  warning-dark: '#ff8f00',
+  warning-light: '#ffa726',
+  danger: '#f44336',
+  danger-dark: '#e53935',
+  danger-light: '#ef5350',
+  info: '#2196f3',
+  info-dark: '#1976d2',
+  info-light: '#2196f3',
+  light: '#f5f5f5',
+  dark: '#212121',
+  black: '#000',
+  white: '#fff',
+  gray: '#9e9e9e',
+  gray-dark: '#616161',
+  gray-light: '#e0e0e0',
+  gray-lighter: '#f5f5f5',
+  gray-lightest: '#fafafa',
+  gray-transparent: 'rgba(0, 0, 0, 0.87)',
+  gray-transparent-dark: 'rgba(0, 0, 0, 0.54)',
+);
+
+$sizes: (
+  '0': 0,
+  '1': 0.5rem,
+  '2': 1rem,
+  '3': 1.5rem,
+  '4': 2rem,
+  '5': 2.5rem,
+  '6': 3rem,
+  '7': 3.5rem,
+  '8': 4rem,
+  '9': 4.5rem,
+  '10': 5rem,
+  '11': 5.5rem,
+  '12': 6rem,
+  '13': 6.5rem,
+  '14': 7rem,
+  '15': 7.5rem,
+  '16': 8rem,
+  '17': 8.5rem,
+  '18': 9rem,
+  '19': 9.5rem,
+  '20': 10rem,
+  '21': 10.5rem,
+  '22': 11rem,
+  '23': 11.5rem,
+  '24': 12rem,
+  '25': 12.5rem,
+  '30': 15rem,
+  '35': 17.5rem,
+  '40': 20rem,
+  '45': 22.5rem,
+  '50': 25rem,
+  '60': 30rem,
+  '70': 35rem,
+  '80': 40rem,
+);
+
+$fractions: (
+  '1\/2': 50%,
+  '1\/3': 33.33333%,
+  '2\/3': 66.66666%,
+  '1\/4': 25%,
+  '3\/4': 75%,
+  '1\/5': 20%,
+  '2\/5': 40%,
+  '3\/5': 60%,
+  '4\/5': 80%,
+);
+
+// Responsive Breakpoints
+$breakpoints-reverse: (
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1199.98px,
+  xxl: 1399.98px,
+);
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+:root {
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+}

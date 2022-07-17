@@ -1,0 +1,119 @@
+/*
+*
+* Sizes
+*
+* Static width and height utils.
+*
+*/
+@use 'sass:string';
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @each $name, $size in $sizes {
+    @if ($breakpoint-name == xs) {
+      .h-#{$name} {
+        height: $size !important;
+      }
+      .w-#{$name} {
+        width: $size !important;
+      }
+    } @else {
+      .h-#{$breakpoint-name}-#{$name} {
+        @include respond-above($breakpoint-name) {
+          height: $size !important;
+        }
+      }
+      .w-#{$breakpoint-name}-#{$name} {
+        @include respond-above($breakpoint-name) {
+          width: $size !important;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @if ($breakpoint-name == xs) {
+    .w-full {
+      width: 100% !important;
+    }
+
+    .h-full {
+      width: 100% !important;
+    }
+    .w-auto {
+      width: auto !important;
+    }
+    .h-auto {
+      height: auto !important;
+    }
+  } @else {
+    @include respond-above($breakpoint-name) {
+      .w-#{$breakpoint-name}-full {
+        width: 100% !important;
+      }
+      .h-#{$breakpoint-name}-full {
+        height: 100% !important;
+      }
+      .w-#{$breakpoint-name}-auto {
+        @include respond-above($breakpoint-name) {
+          width: auto !important;
+        }
+      }
+
+      .h-#{$breakpoint-name}-auto {
+        @include respond-above($breakpoint-name) {
+          height: auto !important;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @each $fraction-name, $fraction-value in $fractions {
+    $fraction-start: string.slice($fraction-name, 0, 1);
+    $fraction-end: string.slice($fraction-name, -1);
+
+    @if $breakpoint-name == xs {
+      .w-#{$fraction-start}\/#{$fraction-end} {
+        width: $fraction-value !important;
+      }
+      .h-#{$fraction-start}\/#{$fraction-end} {
+        height: $fraction-value !important;
+      }
+    } @else {
+      @include respond-above($breakpoint-name) {
+        .h-#{$breakpoint-name}-#{$fraction-start}\/#{$fraction-end} {
+          height: $fraction-value !important;
+        }
+        .w-#{$breakpoint-name}-#{$fraction-start}\/#{$fraction-end} {
+          width: $fraction-value !important;
+        }
+      }
+    }
+  }
+}
+
+.min-h-100 {
+  min-height: 100%;
+}
+
+.max-h-100 {
+  max-height: 100%;
+}
+
+.min-w-100 {
+  min-width: 100%;
+}
+
+.max-w-100 {
+  max-width: 100%;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.min-h-0 {
+  min-height: 0;
+}
